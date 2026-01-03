@@ -47,6 +47,7 @@ nav{
     width:100%;
     background-color: rgba(0, 0, 0, 0.377);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     display: flex;
     justify-content: center;
@@ -180,6 +181,7 @@ a:hover{
 .hero p,
 .hero h1{
     color:var(--c);
+    text-align: center;
 }
 
 .hero{
