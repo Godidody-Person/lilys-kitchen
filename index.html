@@ -5,15 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lily's Kitchen</title>
 
+    <meta name="description" content="Lily's Kitchen is a restaurant that serves authentic Chinese dishes.">
+    <meta name="keywords" content="Lily's Kitchen, Chinese restaurant, Chinese food, Chinese cuisine, Chinese restaurant in Malvern, Chinese restaurant in Lancaster, Chinese restaurant in Philadelphia">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="#home" class="logo"><img src="favicon.png" alt="Lily's Kitchen Logo"></a>
-        <a href="#menu">Menu</a>
-        <a href="#hours">Hours</a>
-        <a href="#location">Location</a>
-        <a href="#about">About Us</a>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('nav');
+            document.getElementById('show-nav').addEventListener('click', () => {
+                nav.style.visibility = 'visible';
+            });
+
+            document.getElementById('hide-nav').addEventListener('click', () => {
+                nav.style.visibility = 'hidden';
+            });
+
+            for (let link of document.querySelectorAll('nav a')) {
+                link.addEventListener('click', () => {
+                    nav.style.visibility = 'hidden';
+                });
+            }
+        });
+    </script>
+    
+    <button id="show-nav" aria-label="Open navigation menu">
+        <img src="media/hero/icons/nav.svg" alt="Menu" class="icon">
+    </button>
+    <nav id="nav">
+        <button id="hide-nav" aria-label="Close navigation menu" style="position: absolute; top: 10px; right: 10px;">
+            <img src="media/hero/icons/x.svg" alt="Close" class="icon">
+        </button>
+        <a href="index.html" class="logo"><img src="favicon.png" alt="Lily's Kitchen Logo"></a>
+        <a href="index.html#menu">Menu</a>
+        <a href="index.html#hours">Hours</a>
+        
+        <a href="index.html#location">Location</a>
+        <a href="index.html#about">About Us</a>
 
         <div class="btn-col">
             <div class="dropdown">
